@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessible Images Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="/css/Color_Contrast_Fixes.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a class="visually-hidden-focusable" href="#Main_Header">Skip to Main Content</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
+        <div class="container">
+            <a class="navbar-brand py-3" href="index.html">Accessible Website Demos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle py-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Examples
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Accessible_Images.html" >Images</a></li>
+                            <li><a class="dropdown-item" href="Accessible_Tables.html" aria-current="page">Tables</a></li>
+                            <li><a class="dropdown-item" href="Accessible_Input.html">User Input</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main id="main" class="container-fluid align-items-center">
+    <div class="row row-cols-auto justify-content-evenly">
+        <article aria-labelledby="Main_Header" class="col-lg-8">
+            <h1 class="text-body-emphasis row row-cols-auto justify-content-md-center" id="Main_Header">Accessible Images Demo</h1>
+            <p>Below is a grid of the same image with different examples of how to use alternative text to make it non-visually accessible.</p>
+            <section aria-label="Series of Images with Different Alternative Text Configurations" class="row row-cols-md-3 justify-content-evenly">
+                <div class="col-auto">
+                    <img class="img-fluid" src="/images/stock_image.jpg" alt="" aria-describedby="decorative">
+                    <p id="decorative">Example of an image marked as decorative by empty alt-text.</p>
+                </div>
+                <div class="col-auto">
+                    <img class="img-fluid" src="/images/stock_image.jpg" alt="Alternative text for image without title tag" aria-describedby="with_alt">
+                    <p id="with_alt">Example of an image  with alternative text</p>
+                </div>
+                <div class="col-auto">
+                    <img class="img-fluid"  src="/images/stock_image.jpg" alt="Alternative text for image with title tag" title="Image with title tag">
+                    <p>Example of an image  with alternative text and a title tag</p>
+                </div>
+                <figure>
+                    <img class="img-fluid"  src="/images/stock_image.jpg" alt="Alternative text for image inside a captioned figure">
+                    <figcaption>Example of an image described by a figure caption.</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-fluid"  src="/images/stock_image.jpg" alt="Alternative text for image inside a figure with no caption">
+                </figure>
+                <div class="col-auto">
+                    <img alt="Shared Image 1" class="img-fluid" src="/images/stock_image.jpg" aria-describedby="shared_label">
+                    <img alt="Shared Image 2" class="img-fluid" src="/images/stock_image.jpg" aria-describedby="shared_label">
+                    <p id="shared_label">Example of two images labeled by a shared paragraph tag.</p>
+                </div>
+            </section>
+        </article>
+        <aside class="col-sm-2 align-items-end">
+            <h2 class="text-body-emphasis" id="references">References</h2>
+            <nav aria-labelledby="references">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="https://www.w3.org/WAI/tutorials/images/" aria-label="WCAG Image Accessibility (opens new tab)" target="_blank"> WCAG Image Accessibility Tutorial</a>
+                    </li>
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="https://www.w3schools.com/accessibility/accessibility_meaningful_images.php" aria-label="W3Schools Image Accessibility (opens new tab)" target="_blank"> W3Schools Image Accessibility</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+</main>
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+        <p class="mb-3 mb-md-0 text-body-secondary">© 2024 Northeastern University ACT Lab</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

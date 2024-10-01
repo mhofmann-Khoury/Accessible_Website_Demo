@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessible Input Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="/css/Color_Contrast_Fixes.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a class="visually-hidden-focusable" href="#Main_Header">Skip to Main Content</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
+        <div class="container">
+            <a class="navbar-brand py-3" href="index.html">Accessible Input and Interaction Demo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle py-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Examples
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Accessible_Images.html" >Images</a></li>
+                            <li><a class="dropdown-item" href="Accessible_Tables.html" >Tables</a></li>
+                            <li><a class="dropdown-item" href="Accessible_Input.html" aria-current="page">User Input</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main id="main" class="container-fluid align-items-center">
+    <div class="row row-cols-auto justify-content-evenly">
+        <article aria-labelledby="Main_Header" class="col-lg-8">
+            <h1 class="text-body-emphasis row row-cols-auto" id="Main_Header">Accessible Input and Interaction Demo</h1>
+            <p>Below are examples of interactive forms</p>
+            <section class="row row-cols-auto">
+                <form class="align-items-center">
+                    <div class="form-row">
+                        <label>
+                            Simple Text Input Implicit Label: <input  type="text">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="simple"> Simple Text Input with Label: </label>
+                        <input type="text" id="simple" class="py-2">
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" aria-label="Text box with Visually Hidden Label" class="py-2">
+                    </div>
+                    <fieldset class="form-row">
+                        <legend>Associated Inputs in FieldSet</legend>
+                        <label class="form-group col-auto">
+                            Input 1: <input type="text">
+                        </label>
+                        <label class="form-group col-auto">
+                            Input 2: <input type="text" >
+                        </label>
+                    </fieldset>
+                    <div class="form-group row">
+                        <label>
+                            Required Value: <input type="text" required aria-required="true" >
+                        </label>
+                    </div>
+                    <h2>Increase Accessibility with Form Validation</h2>
+                    <div class="form-group row">
+                        <label>Email:
+                            <input type="email" autocomplete="email">
+                        </label>
+                    </div>
+                    <input type="submit" aria-label="Submit Form" class="py-2">
+                </form>
+            </section>
+        </article>
+        <aside class="col-sm-2 justify-content-end-end">
+            <h2 class="text-body-emphasis" id="references">References</h2>
+            <nav aria-labelledby="references">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="https://www.w3.org/WAI/tutorials/images/" aria-label="WCAG Image Accessibility (opens new tab)" target="_blank"> WCAG Image Accessibility Tutorial</a>
+                    </li>
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="https://www.w3schools.com/accessibility/accessibility_meaningful_images.php" aria-label="W3Schools Image Accessibility (opens new tab)" target="_blank"> W3Schools Image Accessibility</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+</main>
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+        <p class="mb-3 mb-md-0 text-body-secondary">© 2024 Northeastern University ACT Lab</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
